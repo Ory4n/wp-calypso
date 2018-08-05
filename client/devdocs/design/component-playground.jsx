@@ -41,11 +41,7 @@ class ComponentPlayground extends Component {
 			'design__component-playground-code': true,
 			'show-code': toggleCode ? this.state.showCode : true,
 		} );
-		const { section } = this.props;
-		const scope =
-			'gutenberg-components' === section
-				? require( '@wordpress/components' )
-				: require( 'devdocs/design/playground-scope' );
+		const scope = require( 'devdocs/design/playground-scope' );
 
 		return (
 			<LiveProvider
